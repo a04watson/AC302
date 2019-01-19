@@ -1,26 +1,48 @@
-console.log("test...")
-
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.moveTo(0,0);
-ctx.lineTo(200,100);
 
-ctx.moveTo(200,150);
-ctx.lineTo(0,200);
-
-ctx.strokeStyle = "blue";
-ctx.lineWidth = 5;
+ctx.beginPath();
+ctx.arc(150,150,120,0,6.28);
+ctx.closePath();
 ctx.stroke();
-ctx.fillStyle = "rgb(200,50,10)";
-ctx.fillRect = (75, 125, 150, 100);
-ctx.strokeStyle = "green"
-ctx.strokeRect(50,100,200,150);
-ctx.clearRect(125, 150, 50, 50);
+ctx.fillStyle = "cyan";
+ctx.fill();
 
+var c1 = document.getElementById("myCanvas1");
+var ctx1 = c1.getContext("2d");
 
+ctx1.beginPath();
+ctx1.strokeStyle = "lime";
+ctx1.moveTo(150,25);
+ctx1.lineTo(225,150);
+ctx1.lineTo(75,150);
+ctx1.closePath();
+ctx1.stroke();
+ctx1.fillStyle = "green";
+ctx1.fill();
 
-var c2 - document.getElementById("myCanvas");
+var c2 = document.getElementById("myCanvas2");
 var ctx2 = c2.getContext("2d");
-ctx2.moveTo(0,305);
-ctx2.strokeRect(155,0,150,150);
-ctx2.fillRect = (75,125,150,100);
+
+ctx2.beginPath();
+ctx2.moveTo(150,25);
+ctx2.lineTo(225,150);
+ctx2.lineTo(150,275);
+ctx2.lineTo(75,150);
+ctx2.closePath();
+ctx2.stroke();
+ctx2.fillStyle = "red";
+ctx2.fill();
+
+var c3 = document.getElementById("myCanvas3");
+var ctx3 = c3.getContext("2d");
+
+ctx3.beginPath();
+ctx3.moveTo(0,0);
+ctx3.lineTo(300,300);
+ctx3.lineTo(300,0);
+ctx3.lineTo(0,300);
+ctx3.closePath();
+ctx2.stroke();
+ctx3.fillStyle = "blue";
+ctx3.fill();
