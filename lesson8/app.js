@@ -32,7 +32,7 @@ function create(){
 	//set the ground to stay still
 	ground.body.immovable = true;
 
-	var ledge1 = platforms.create(350, 400, 'ground');
+	var ledge1 = platforms.create(380, 400, 'ground');
 	ledge1.body.immovable = true;
 
     var ledge2 = platforms.create(-70, 250, 'ground');
