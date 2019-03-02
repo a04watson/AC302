@@ -157,6 +157,6 @@ function moveEnemy(){
 		baddie.body.velocity.x = -120;
 	} else if (baddie.x < 405){
 		baddie.animations.play('right');
-		baddie.body.velovity.x = 120;
+		baddie.body.velocity.x = 120;
 	}
 }
