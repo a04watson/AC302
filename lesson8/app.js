@@ -60,68 +60,68 @@ function create(){
 	player.body.gravity.y = 300;
 	player.body.collideWorldBounds = true;
 
-	//creating the enemy
-	baddie = game.add.sprite(760,20,'baddie');
-	baddie.animations.add('left',[0,1], 10, true);
-	baddie.animations.add('right',[2,3], 10, true);
-	game.physics.arcade.enable(baddie);
-	baddie.body.bounce.y = 0.2;
-	baddie.body.gravity.y = 400;
-	player.body.collideWorldBounds = true;
+	// //creating the enemy
+	// baddie = game.add.sprite(760,20,'baddie');
+	// baddie.animations.add('left',[0,1], 10, true);
+	// baddie.animations.add('right',[2,3], 10, true);
+	// game.physics.arcade.enable(baddie);
+	// baddie.body.bounce.y = 0.2;
+	// baddie.body.gravity.y = 400;
+	// player.body.collideWorldBounds = true;
 
-	//creating the stars
-	stars = game.add.physicsGroup();
-	stars.enableBody = true;
+	// //creating the stars
+	// stars = game.add.physicsGroup();
+	// stars.enableBody = true;
 
-	var star1 = stars.create(0,0,'star');
-	star1.body.gravity.y = 250;
-	star1.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star1 = stars.create(0,0,'star');
+	// star1.body.gravity.y = 250;
+	// star1.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	var star2 = stars.create(60,0,'star');
-	star2.body.gravity.y = 250;
-	star2.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star2 = stars.create(60,0,'star');
+	// star2.body.gravity.y = 250;
+	// star2.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	var star3 = stars.create(120,0,'star');
-	star3.body.gravity.y = 250;
-	star3.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star3 = stars.create(120,0,'star');
+	// star3.body.gravity.y = 250;
+	// star3.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	var star4 = stars.create(180,0,'star');
-	star4.body.gravity.y = 250;
-	star4.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star4 = stars.create(180,0,'star');
+	// star4.body.gravity.y = 250;
+	// star4.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	var star5 = stars.create(240,0,'star');
-	star5.body.gravity.y = 250;
-	star5.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star5 = stars.create(240,0,'star');
+	// star5.body.gravity.y = 250;
+	// star5.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	var star6 = stars.create(300,0,'star');
-	star6.body.gravity.y = 250;
-	star6.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star6 = stars.create(300,0,'star');
+	// star6.body.gravity.y = 250;
+	// star6.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	var star7 = stars.create(360,0,'star');
-	star7.body.gravity.y = 250;
-	star7.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star7 = stars.create(360,0,'star');
+	// star7.body.gravity.y = 250;
+	// star7.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	var star8 = stars.create(420,0,'star');
-	star8.body.gravity.y = 250;
-	star8.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star8 = stars.create(420,0,'star');
+	// star8.body.gravity.y = 250;
+	// star8.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	var star9 = stars.create(480,0,'star');
-	star9.body.gravity.y = 250;
-	star9.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star9 = stars.create(480,0,'star');
+	// star9.body.gravity.y = 250;
+	// star9.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	var star10 = stars.create(560,0,'star');
-	star10.body.gravity.y = 250;
-	star10.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star10 = stars.create(560,0,'star');
+	// star10.body.gravity.y = 250;
+	// star10.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	var star11 = stars.create(630,0,'star');
-	star11.body.gravity.y = 250;
-	star11.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star11 = stars.create(630,0,'star');
+	// star11.body.gravity.y = 250;
+	// star11.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	var star12 = stars.create(700,0,'star');
-	star12.body.gravity.y = 250;
-	star12.body.bounce.y = 0.7 - Math.random() * 0.2;
+	// var star12 = stars.create(700,0,'star');
+	// star12.body.gravity.y = 250;
+	// star12.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	cursors = game.input.keyboard.createCursorKeys();
+	// cursors = game.input.keyboard.createCursorKeys();
 }
 
 
@@ -131,21 +131,21 @@ function update(){
 	game.physics.arcade.collide(stars,platforms);
 	game.physics.arcade.collide(baddie,platforms);
 
-	//player not doing anything or default condition
-	player.body.velocity.x = 0;
+	// //player not doing anything or default condition
+	// player.body.velocity.x = 0;
 
-	//do the player control
-	if(cursors.left.isDown) {
-		player.body.velocity.x = -150;
-		player.animations.play('left');
-	} else if (cursors.right.isDown) {
-		player.body.velocity.x = 150;
-		player.animations.play('right');
-	} else {
-		player.animation.stop();
-		player.frame = 4;
-	}
-	if (cursors.up.isDown && player.body.touching.down) {
-		player.body.velocity.y = -300;
-	}
+	// //do the player control
+	// if(cursors.left.isDown) {
+	// 	player.body.velocity.x = -150;
+	// 	player.animations.play('left');
+	// } else if (cursors.right.isDown) {
+	// 	player.body.velocity.x = 150;
+	// 	player.animations.play('right');
+	// } else {
+	// 	player.animations.stop();
+	// 	player.frame = 4;
+	// }
+	// if (cursors.up.isDown && player.body.touching.down) {
+	// 	player.body.velocity.y = -300;
+	// }
 }
