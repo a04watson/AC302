@@ -69,13 +69,13 @@ function create(){
 	baddie.body.gravity.y = 400;
 	player.body.collideWorldBounds = true;
 
-	// //creating the stars
-	// stars = game.add.physicsGroup();
-	// stars.enableBody = true;
+	//creating the stars
+	stars = game.add.physicsGroup();
+	stars.enableBody = true;
 
-	// var star1 = stars.create(0,0,'star');
-	// star1.body.gravity.y = 250;
-	// star1.body.bounce.y = 0.7 - Math.random() * 0.2;
+	var star1 = stars.create(0,0,'star');
+	star1.body.gravity.y = 250;
+	star1.body.bounce.y = 0.7 - Math.random() * 0.2;
 
 	// var star2 = stars.create(60,0,'star');
 	// star2.body.gravity.y = 250;
