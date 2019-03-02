@@ -149,3 +149,14 @@ function update(){
 		player.body.velocity.y = -300;
 	}
 }
+
+function moveEnemy(){
+	//Enemy AI
+	if(baddie.x > 759) {
+		baddie.animations.play('left');
+		baddie.body.velocity.x = -120;
+	} else if (baddie.x < 405){
+		baddie.animations.play('right');
+		baddie.body.velovity.x = 120;
+	}
+}
