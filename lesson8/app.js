@@ -121,7 +121,7 @@ function create(){
 	star12.body.gravity.y = 250;
 	star12.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	cursors = game.input.keyboard.createCursorkeys();
+	cursors = game.input.keyboard.createCursorKeys();
 }
 
 
