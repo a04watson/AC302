@@ -30,13 +30,13 @@ function create(){
 	//multiplies the height & width of the ground image by 2
 	ground.scale.setTo(2, 2);
 	//set the ground to stay still
-	ground.body.immoveable = true;
+	ground.body.immovable = true;
 
 	var ledge1 = platforms.create(350, 400, 'ground');
-	ledge1.body.immoveable = true;
+	ledge1.body.immovable = true;
 
     var ledge2 = platforms.create(-70, 250, 'ground');
-	ledge2.body.immoveable = true;
+	ledge2.body.immovable = true;
 
 	var style = {font: "bold 32px Arial", fill: "white"};
 
