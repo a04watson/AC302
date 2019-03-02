@@ -60,14 +60,14 @@ function create(){
 	player.body.gravity.y = 300;
 	player.body.collideWorldBounds = true;
 
-	// //creating the enemy
-	// baddie = game.add.sprite(760,20,'baddie');
-	// baddie.animations.add('left',[0,1], 10, true);
-	// baddie.animations.add('right',[2,3], 10, true);
-	// game.physics.arcade.enable(baddie);
-	// baddie.body.bounce.y = 0.2;
-	// baddie.body.gravity.y = 400;
-	// player.body.collideWorldBounds = true;
+	//creating the enemy
+	baddie = game.add.sprite(760,20,'baddie');
+	baddie.animations.add('left',[0,1], 10, true);
+	baddie.animations.add('right',[2,3], 10, true);
+	game.physics.arcade.enable(baddie);
+	baddie.body.bounce.y = 0.2;
+	baddie.body.gravity.y = 400;
+	player.body.collideWorldBounds = true;
 
 	// //creating the stars
 	// stars = game.add.physicsGroup();
