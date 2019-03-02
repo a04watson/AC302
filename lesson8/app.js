@@ -121,15 +121,15 @@ function create(){
 	// star12.body.gravity.y = 250;
 	// star12.body.bounce.y = 0.7 - Math.random() * 0.2;
 
-	// cursors = game.input.keyboard.createCursorKeys();
+	cursors = game.input.keyboard.createCursorKeys();
 }
 
 
 
 function update(){
-	// game.physics.arcade.collide(player,platforms);
+	game.physics.arcade.collide(player,platforms);
 	// game.physics.arcade.collide(stars,platforms);
-	// game.physics.arcade.collide(baddie,platforms);
+	game.physics.arcade.collide(baddie,platforms);
 
 	// //player not doing anything or default condition
 	// player.body.velocity.x = 0;
