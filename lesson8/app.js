@@ -127,9 +127,9 @@ function create(){
 
 
 function update(){
-	game.physics.arcade.collide(player,platforms);
-	game.physics.arcade.collide(stars,platforms);
-	game.physics.arcade.collide(baddie,platforms);
+	// game.physics.arcade.collide(player,platforms);
+	// game.physics.arcade.collide(stars,platforms);
+	// game.physics.arcade.collide(baddie,platforms);
 
 	// //player not doing anything or default condition
 	// player.body.velocity.x = 0;
