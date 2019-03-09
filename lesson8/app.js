@@ -184,3 +184,11 @@ function loseLife(player,baddie){
 	baddie.kill();
 	baddie.reset(10,20);
 }
+
+function endGame(){
+	player.kill();
+	scorelabel.text="GAME OVER You scored: " + score;
+	scoretext.visible = false;
+	lifelabel.visible = false;
+	lifetext.visible = false;
+}
