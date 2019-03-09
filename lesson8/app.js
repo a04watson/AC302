@@ -187,8 +187,8 @@ function loseLife(player,baddie){
 
 function endGame(){
 	player.kill();
-	scorelabel.text="GAME OVER You scored: " + score;
+	scorelabel.text="GAME OVER! You scored: " + score;
 	scoretext.visible = false;
-	lifelabel.visible = false;
-	lifetext.visible = false;
+	liveslabel.visible = false;
+	livestext.visible = false;
 }
