@@ -172,7 +172,7 @@ function collectStar(player,star){
 	//update score
 	score+=1;
 	//reflect in text
-	coretext.setText(score);
+	scoretext.setText(score);
 	//remove the star and reset
 	star.kill();
 	star.reset(Math.floor(Math.random()*750),0);
