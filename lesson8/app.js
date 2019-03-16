@@ -136,7 +136,7 @@ function create(){
 	star12.body.bounce.y = 0.7 - Math.random() * 0.2;
 
 	cursors = game.input.keyboard.createCursorKeys();
-	game.time.events.add(Phaser.Timer.SECOND * 30, newFirstaid, this);
+	//game.time.events.add(Phaser.Timer.SECOND * 30, newFirstaid, this);
 }
 
 
@@ -208,11 +208,11 @@ function collectFirstaid(player,firstaid){
 	lives += 1;
 	livestext.setText(lives);
 	firstaid.kill();
-}
-
-function newFirstaid(firstaid){
 	firstaid.reset(Math.floor(Math.random()*750),0);
-}
+
+// function newFirstaid(firstaid){
+// 	firstaid.reset(Math.floor(Math.random()*750),0);
+// }
 
 function loseLife(player,baddie){
 	lives -= 1;
