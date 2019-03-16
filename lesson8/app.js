@@ -70,7 +70,7 @@ function create(){
 	player.body.collideWorldBounds = true;
 
 	//creating the firstaid kit
-	firstaidKit = gamme.add.physicsGroup();
+	firstaidKit = game.add.physicsGroup();
 	firstaidKit.enableBody = true;
 	var firstaid = firstaidKit.create(Math.floor(Math.random()*750),0,'firstaid');
 	firstaid.body.gravity.y = 250;
