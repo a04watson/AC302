@@ -136,7 +136,7 @@ function create(){
 	star12.body.bounce.y = 0.7 - Math.random() * 0.2;
 
 	cursors = game.input.keyboard.createCursorKeys();
-	game.time.events.add(Phaser.Timer.SECOND * 30, 999, newFirstaid, this);
+	game.time.events.add(Phaser.Timer.SECOND * 30, 2, newFirstaid, this);
 }
 
 
