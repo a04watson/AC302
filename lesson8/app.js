@@ -211,7 +211,9 @@ function collectFirstaid(player,firstaid){
 }
 
 function newFirstaid(firstaid){
-	firstaid.reset(Math.floor(Math.random()*750),0);
+	var firstaid = firstaidKit.create(Math.floor(Math.random()*750),0,'firstaid');
+	firstaid.body.gravity.y = 250;
+	firstaid.body.bounce.y = 0.7 - Math.random()*0.5;
 }
 
 function loseLife(player,baddie){
