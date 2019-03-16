@@ -69,10 +69,17 @@ function create(){
 	baddie.body.gravity.y = 400;
 	player.body.collideWorldBounds = true;
 
+	//creating the firstaid kit
+	firstaidKit = gamme.add.physicsGroup();
+	firstaidKit.enableBody = true;
+	var firstaid = firstaidKit.create(Math.floor(Math.random()*750),0,'firstaid');
+	firstaid.body.gravity.y = 250;
+	firstaid.body.bounce.y = 0.7 - Math.random()*0.5;
+
 	//creating the diamond
 	diamonds = game.add.physicsGroup();
 	diamonds.enableBody = true;
-	var diamond = diamonds.create(Math.floor(Math.random()*800), 0, 'diamond');
+	var diamond = diamonds.create(Math.floor(Math.random()*750), 0, 'diamond');
 	diamond.body.gravity.y = 250;
 	diamond.body.bounce.y = 0.7 - Math.random()*0.5;
 
@@ -129,6 +136,7 @@ function create(){
 	star12.body.bounce.y = 0.7 - Math.random() * 0.2;
 
 	cursors = game.input.keyboard.createCursorKeys();
+	game.time.events.add(Phaser.Timer.SECOND * 30, newFirstaid, this);
 }
 
 
@@ -138,9 +146,11 @@ function update(){
 	game.physics.arcade.collide(stars,platforms);
 	game.physics.arcade.collide(baddie,platforms);
 	game.physics.arcade.collide(diamonds,platforms);
+	game.physics.arcade.collide(firstaidKit,platforms);
 	game.physics.arcade.overlap(player,stars,collectStar);
 	game.physics.arcade.overlap(player,baddie,loseLife);
 	game.physics.arcade.overlap(player,diamonds,collectDiamond);
+	game.physics.arcade.overlap(player,firstaidKit,collectFirstaid);
 
 	//player not doing anything or default condition
 	player.body.velocity.x = 0;
@@ -191,7 +201,17 @@ function collectDiamond(player,diamond){
 	score+=10;
 	scoretext.setText(score);
 	diamond.kill();
-	diamond.reset(Math.floor(Math.random()*800),0);
+	diamond.reset(Math.floor(Math.random()*750),0);
+}
+
+function collectFirstaid(player,firstaid){
+	lives += 1;
+	livestext.setText(lives);
+	firstaid.kill();
+}
+
+function newFirstaid(firstaid){
+	firstaid.reset(Math.floor(Math.random()*750),0);
 }
 
 function loseLife(player,baddie){
