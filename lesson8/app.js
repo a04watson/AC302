@@ -189,7 +189,7 @@ function collectStar(player,star){
 
 function collectDiamond(player,diamond){
 	score+=10;
-	score.text.setText(score);
+	scoretext.setText(score);
 	diamond.kill();
 	diamond.reset(Math.floor(Math.random()*800),0);
 }
