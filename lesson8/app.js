@@ -70,9 +70,9 @@ function create(){
 	player.body.collideWorldBounds = true;
 
 	//creating the diamond
-	diamond = game.add.physicsGroup();
-	diamond.enableBody = true;
-	var diamond = diamond.create(Math.floor(Math.random()*800), 0, 'diamond');
+	diamonds = game.add.physicsGroup();
+	diamonds.enableBody = true;
+	var diamond = diamonds.create(Math.floor(Math.random()*800), 0, 'diamond');
 	diamond.body.gravity.y = 250;
 	diamond.body.bounce.y = 0.7 - Math.random()*0.5;
 
@@ -137,10 +137,10 @@ function update(){
 	game.physics.arcade.collide(player,platforms);
 	game.physics.arcade.collide(stars,platforms);
 	game.physics.arcade.collide(baddie,platforms);
-	game.physics.arcade.collide(diamond,platforms);
+	game.physics.arcade.collide(diamonds,platforms);
 	game.physics.arcade.overlap(player,stars,collectStar);
 	game.physics.arcade.overlap(player,baddie,loseLife);
-	game.physics.arcade.overlap(player,diamond,collectDiamond);
+	game.physics.arcade.overlap(player,diamonds,collectDiamond);
 
 	//player not doing anything or default condition
 	player.body.velocity.x = 0;
