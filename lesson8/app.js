@@ -209,6 +209,7 @@ function collectFirstaid(player,firstaid){
 	livestext.setText(lives);
 	firstaid.kill();
 	firstaid.reset(Math.floor(Math.random()*750),0);
+}
 
 // function newFirstaid(firstaid){
 // 	firstaid.reset(Math.floor(Math.random()*750),0);
